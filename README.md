@@ -1,6 +1,8 @@
 # Data-Science-job-postings-on-Glassdoor-Performing-Exploratory-Data-Analysis-
 The primary goal of this project is to conduct a thorough data cleaning process and perform exploratory data analysis (EDA) on a dataset.
 
+![2023_blog-home-featured-ani_728x466](https://github.com/S-Tanwar/Data-Science-job-postings-on-Glassdoor-Performing-Exploratory-Data-Analysis-/assets/95356553/0846816b-4a10-4fb5-9bb5-60487e829ed3)
+
 ## Introduction
 As a data analyst, I embarked on a journey to conduct comprehensive data cleaning and exploratory data analysis (EDA) to improve data quality and unveil hidden patterns within a dataset. This project aims to provide valuable insights and facilitate informed decision-making. In this blog post, I will walk you through the entire process, from the dataset explanation to the findings.
 
@@ -36,3 +38,82 @@ My data cleaning and EDA process involved several key steps:
 
 5. Data Cleaning and Transformation for Specific Columns:
 -- I processed columns such as 'Job Title', 'Company Name', 'Size', 'Type of Ownership', 'Industry', 'Sector', and 'Revenue' to handle missing values and improve data quality.
+
+## My Findings
+During the exploratory data analysis (EDA) phase, I made several noteworthy observations:
+
+1. Size of Companies:
+The majority of companies in the dataset have between 51 to 200 employees, with 135 companies falling into this category.
+Companies with 1001 to 5000 employees and 1 to 50 employees are also relatively common, with 104 and 86 companies, respectively.
+The least common size category is companies with 5001 to 10,000 employees, with only 61 companies falling into this group.
+
+2. Type of Ownership:
+The most common type of ownership is "Company - Private," with 397 companies falling into this category.
+"Company - Public" is the second most common type of ownership, with 153 companies.
+Other types of ownership, such as "Nonprofit Organization" and "Subsidiary or Business Segment," are less common.
+
+3. Industry:
+The dataset covers a wide range of industries, with the top three being Biotech & Pharmaceuticals (66 companies), IT Services (61 companies), and Computer Hardware & Software (57 companies).
+Many other industries are represented, including Aerospace & Defense, Enterprise Software & Network Solutions, and Consulting.
+
+4. Sector:
+The most common sector is Information Technology, with 188 companies falling into this category.
+Other significant sectors include Business Services (120 companies), Biotech & Pharmaceuticals (66 companies), and Aerospace & Defense (46 companies).
+
+5. Revenue:
+The dataset includes companies with a diverse range of revenue levels.
+The most common revenue range is 100 to 500 million (USD) with 94 companies.
+Some companies have very high revenue levels, such as 10+ billion (USD), while others have lower revenues, such as Less than 1 million (USD).
+
+6. Location:
+The dataset includes companies from various locations, with San Francisco, CA having the highest representation (69 companies).
+Other notable locations include New York, NY (50 companies), Washington, DC (26 companies), and Boston, MA (24 companies).
+
+7. Skewness and Kurtosis for Rating:
+Skewness value is approximately 0.0187, indicating a nearly symmetric distribution of ratings with a slight right (positive) skew.
+Kurtosis value is approximately -0.44, suggesting a platykurtic distribution with thinner tails compared to a normal distribution.
+
+![graph 8](https://github.com/S-Tanwar/Data-Science-job-postings-on-Glassdoor-Performing-Exploratory-Data-Analysis-/assets/95356553/667105fa-c475-43fb-8873-dc217f79c3d9)
+
+9. Skewness and Kurtosis for High_Salary_in_dollar (Upper limit of salary):
+Skewness value is approximately 1.09, indicating a moderate right (positive) skew in salary distribution.
+Kurtosis value is approximately 2.41, suggesting a leptokurtic distribution with heavier tails and a more peaked shape than a normal distribution.
+
+![graph 7](https://github.com/S-Tanwar/Data-Science-job-postings-on-Glassdoor-Performing-Exploratory-Data-Analysis-/assets/95356553/5204ce23-198b-4737-b01d-46bd5c4f0203)
+
+10. Outliers for High_Salary_in_dollar and Rating:
+Outliers were identified for both high salaries and ratings, which may require further investigation for their impact on the analysis.
+
+![graph 6](https://github.com/S-Tanwar/Data-Science-job-postings-on-Glassdoor-Performing-Exploratory-Data-Analysis-/assets/95356553/3d96de1d-abc7-48fb-93d0-f9b43008481f)
+
+11. Relationship between Rating and Salary:
+A weak positive relationship (correlation coefficient of 0.0099) was observed between employee ratings and high salaries.
+
+![graph 5](https://github.com/S-Tanwar/Data-Science-job-postings-on-Glassdoor-Performing-Exploratory-Data-Analysis-/assets/95356553/6af3f1a2-4464-44e9-83a8-d6dd9d9c6263)
+
+11. Salary Variation Across Locations:
+Salaries exhibited significant variation across different locations, with high-paying and low-paying locations identified.
+
+12. Salary with Respect to Industry:
+Industry had a noticeable impact on salary levels, with variations observed among different industries.
+
+![graph 4](https://github.com/S-Tanwar/Data-Science-job-postings-on-Glassdoor-Performing-Exploratory-Data-Analysis-/assets/95356553/630aa781-5dcc-4086-9308-902d18d39dc4)
+
+13. Rating Variation by Sector:
+Employee ratings varied across different sectors, with some sectors having higher average ratings than others.
+
+![graph 3](https://github.com/S-Tanwar/Data-Science-job-postings-on-Glassdoor-Performing-Exploratory-Data-Analysis-/assets/95356553/2500ce08-6675-43c7-ac1d-6bd8c36f3a0a)
+
+14. Relationship between Rating and Type of Ownership:
+Type of ownership was found to influence employee ratings, with certain ownership types associated with higher average ratings.
+
+![graph 2](https://github.com/S-Tanwar/Data-Science-job-postings-on-Glassdoor-Performing-Exploratory-Data-Analysis-/assets/95356553/abef54fa-5565-4300-84cb-6b7ce5a77714)
+
+
+15. Companies with the Most Job Postings:
+Companies with the highest number of job postings were identified, indicating active recruitment and potential job opportunities.
+
+16. Comparison of Industry with Respect to Salary and Rating:
+Industries that offered the highest average salaries and received the highest ratings from employees were identified.
+
+![graph 1](https://github.com/S-Tanwar/Data-Science-job-postings-on-Glassdoor-Performing-Exploratory-Data-Analysis-/assets/95356553/e8478ff4-f540-4010-b26c-e8c4dbd9d280)
