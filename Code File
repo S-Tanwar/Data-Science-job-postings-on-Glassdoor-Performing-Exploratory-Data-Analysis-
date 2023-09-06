@@ -1,0 +1,21 @@
+# Data Science job postings on Glassdoor - EDA
+
+### Importing Libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+#2 lines below for html export
+import plotly.io as pio 
+pio.renderers.default = 'notebook'
+
+#2 lines below for PDF export
+!pip install Pyppeteer
+!pyppeteer-install
+
+### Reading the file
+df = pd.read_csv('Uncleaned_DS_jobs.csv')
+df.head(3)
+df.info()
+#provides a concise summary of the DataFrame.
