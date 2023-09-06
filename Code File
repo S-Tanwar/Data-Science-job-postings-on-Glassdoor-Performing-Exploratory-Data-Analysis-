@@ -19,3 +19,53 @@ df = pd.read_csv('Uncleaned_DS_jobs.csv')
 df.head(3)
 df.info()
 #provides a concise summary of the DataFrame.
+
+### Finding if there is any missing value in the dataset
+any_null_columns = df.isnull().any()
+print(any_null_columns)
+
+### Index Column
+#dropping this column as it used as serial number. (can affect the analysis)
+df.drop(columns=['index'], inplace=True)
+df.head(3)
+
+### Job Title Column
+df['Job Title'].unique()
+
+### Salary Estimate Column
+df['Salary Estimate'].unique()
+
+#function to separate the upper limit and lower limit of the salary
+def salary_to_numeric(salary_range):
+    salary_range = salary_range.replace('K', '')  # Remove 'K'
+    salary_range = salary_range.split('-')  # Split into low and high values
+    low_salary = int(salary_range[0][1:]) * 1000  # Convert to numeric value in thousands
+    
+    high_salary = salary_range[1].split()[0]
+    if high_salary.isdigit():  # Check if the high salary is a valid integer
+        high_salary = int(high_salary) * 1000  # Convert to numeric value in thousands
+    else:
+        high_salary = low_salary  # If the high salary is not a valid integer, use the low salary value as a fallback
+    
+    return low_salary, high_salary
+
+#Apply the function to the 'Salary Estimate' column and create two new columns for low and high salaries
+df[['Low_Salary_in_dollar', 'High_Salary_in_dollar']] = df['Salary Estimate'].apply(salary_to_numeric).tolist()
+df[['Low_Salary_in_dollar', 'High_Salary_in_dollar']]
+
+### Job Description Column
+#dropping this column
+df.drop(columns=['Job Description'], inplace=True)
+
+### Rating Column
+df['Rating'].unique()
+
+#the Scale for rating is 0 to 5
+#Replace '-1' with NaN 
+df['Rating'] = df['Rating'].replace(-1.0, np.nan).round(1)
+#Printing the unique values in the 'Rating' column
+unique_ratings = df['Rating'].unique()
+df['Rating'].unique()
+
+
+
